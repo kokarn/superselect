@@ -5,6 +5,34 @@
 	<meta charset="utf-8">
 	<title>yaselect demo</title>
 	<link rel="stylesheet" href="../design/style.css">
+	<style>
+	/* base style */
+	body, select {
+		font-family: "Helvetica";
+	}
+
+	label {
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+
+	dt, dd {
+		margin: 0;
+		padding: 5px 0;
+	}
+
+	/*dd:after {
+		content: "";
+		clear: both;
+		display: table;
+	}*/
+
+	.hint {
+		color: #aaa;
+		font-size: 0.85em;
+		margin-left: 1em;
+	}
+	</style>
 </head>
 
 <body>
@@ -154,14 +182,15 @@
 	<script src="../jquery.yaselect.js"></script>
 	<script>
 	$(document).ready(function() {
-
-        $('select').change(function(e) {
+		$('select').change(function(e) {
 			$('#lastvalue').text(jQuery(this).val());
-        });
+		});
 
-        $('#select1').yaselect();
+		$('#select1').yaselect({
+			size: 10
+		});
 	});
-    </script>
+	</script>
 
 </body>
 
