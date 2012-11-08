@@ -45,7 +45,7 @@ Your ``select`` will become
     <div class="yaselect-current"><!-- current selection --></div>
   </div>
   <!-- your select tag -->
-  <select name="my-select" style="position: absolute; top: 0px; left: 0px; z-index: 1; display: none; " class="yaselect-select" size="?">
+  <select name="my-select" style="z-index: 0; display: none;" class="yaselect-select" size="?">
     <!-- your option tags -->
   </select>
 </div>
@@ -68,10 +68,18 @@ Make yaselect mimic the default browser behaviour and set the width of each sele
   reuseWidth: true
 ```
 
-## Homepage
+## Compatibility 
 
-http://github.com/choonkeat/yaselect
+Tested with
+* IE 7-9
+* Firefox
+* Safari
+* Chrome
+* Android 2.3.3 (stock browser)
+* iOS 5-6 (both iPhone & iPad)
 
-## License
+## Credits
 
-Copyright (c) 2011 Chew Choon Keat, released under the MIT license
+Original code written by Chew Choon Keat, http://github.com/choonkeat/yaselect in 2011 under the MIT license
+
+90% rewritter in 2012 by Jonathan Wilsson for Supernormal and re-released under MIT.
