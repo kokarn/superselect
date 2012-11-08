@@ -1,0 +1,76 @@
+/* base style */
+body, select {
+	font-family: "Helvetica";
+}
+
+label {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+dt, dd {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.hint {
+	color: #aaa;
+	font-size: 0.85em;
+	margin-left: 1em;
+}
+
+/*
+	==================================
+	Styling for custom select boxes
+	==================================
+*/
+
+.yaselect-select {
+	position: absolute;
+	z-index: 10;
+}
+
+.yaselect-anchor {
+	float: left;
+	margin: 20px 0 0;
+	position: relative;
+}
+
+.yaselect-wrap {
+	background: url(images/yaselect-gradient.png) repeat top left;
+	border: 1px solid #c2cbc2;
+	border-radius: 3px;
+	color: #666;
+	font-size: 17px;
+	height: 38px;
+	line-height: 38px;
+	margin: 0 10px 0 0;
+	outline: none;
+}
+
+.yaselect-wrap .yaselect-current {
+	font-weight: lighter;
+	height: 100%;
+	margin: 0 0 0 8px;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+}
+
+.yaselect-wrap .yaselect-current .yaselect-right-image {
+	background: url(images/yaselect-arrow.png) no-repeat right center;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 52px;
+}
+
+select {
+	outline: none !important;
+}
+
+/*
+	=====================================
+	End styling for custom select boxes
+	=====================================
+*/
