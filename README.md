@@ -82,4 +82,4 @@ Tested with
 
 Original code written by Chew Choon Keat, http://github.com/choonkeat/yaselect in 2011 under the MIT license
 
-90% rewritten in 2012 by (https://github.com/jwilsson)[Jonathan Wilsson] & (https://github.com/kokarn)[Oskar Risberg] for Supernormal and re-released under dual license Beerware & MIT.
+90% rewritten in 2012 by [Jonathan Wilsson](https://github.com/jwilsson) & [Oskar Risberg](https://github.com/kokarn) for Supernormal and re-released under dual license Beerware & MIT.
