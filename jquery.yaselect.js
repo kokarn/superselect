@@ -59,11 +59,12 @@
 		}
 
 		function isMobile () {
-			return navigator.userAgent.match( /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i );
+			return 'ontouchstart' in document;
+			//return navigator.userAgent.match( /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i );
 		}
 
-		return this.each( function ( index, select ) {
-			var jselect = $( select ).addClass( 'yaselect-select' ),
+		return this.each( function ( index ) {
+			var jselect = $( this ).addClass( 'yaselect-select' ),
 				wrap = $( '<div class="yaselect-wrap yaselect-open"><div class="yaselect-current"></div></div>' ),
 				anchor = wrap.wrap( '<div class="yaselect-anchor"></div>' ).parent(),
 				curr = wrap.find( '.yaselect-current' ),
@@ -191,7 +192,7 @@
 				config.size = 1;
 			}
 
-			select.size = config.size;
+			this.size = config.size;
 			setValue( jselect, curr, wrap, false );
 		});
 	};
