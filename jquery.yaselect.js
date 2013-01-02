@@ -60,18 +60,30 @@
 
 		function isMobile () {
 			return 'ontouchstart' in document;
-			//return navigator.userAgent.match( /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i );
 		}
 
 		return this.each( function ( index ) {
-			var jselect = $( this ).addClass( 'yaselect-select' ),
-				wrap = $( '<div class="yaselect-wrap yaselect-open"><div class="yaselect-current"></div></div>' ),
-				anchor = wrap.wrap( '<div class="yaselect-anchor"></div>' ).parent(),
-				curr = wrap.find( '.yaselect-current' ),
+			var jselect = $( this ),
+				wrap,
+				anchor,
+				curr,
 				width = 0,
-				options = jselect.find( 'option' ),
-				selectedOption = jselect[0].selectedIndex,
+				options,
+				selectedOption,
 				fontSize;
+
+			// Prevent multiple instances on the same select
+			if ( jselect.hasClass( 'yaselect-select' ) ) {
+				return true;
+			}
+
+			wrap = $( '<div class="yaselect-wrap yaselect-open"><div class="yaselect-current"></div></div>' );
+			anchor = wrap.wrap( '<div class="yaselect-anchor"></div>' ).parent();
+			curr = wrap.find( '.yaselect-current' );
+			options = jselect.find( 'option' );
+			selectedOption = jselect[0].selectedIndex;
+
+			jselect.addClass( 'yaselect-select' );
 
 			setText(jselect, curr);
 
@@ -82,7 +94,7 @@
 			if ( isMobile() ) {
 				toggleOpen( wrap );
 
-				// Becomes invisible and is placed above wrapper to receive screen tap -- triggering native <select>
+				// Becomes invisible and is placed above wrapper to receive screen tap - triggering native <select>
 				jselect
 					.before( anchor )
 					.css({
@@ -188,7 +200,7 @@
 					jselect.css( 'fontSize', fontSize + 1 + 'px' );
 				}
 
-				// We're resetting it here to prevent height issues on Android and it's never used so it's OK
+				// We're resetting it here to prevent height issues on Android and since it's never used it's OK
 				config.size = 1;
 			}
 
