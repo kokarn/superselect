@@ -1,0 +1,43 @@
+{
+  "name": "superselect",
+    "title": "jQuery SuperSelect",
+    "description": "jQuery plugin for custom styling of select elements.",
+    "keywords": [
+      "select",
+      "polyfill"
+      ],
+    "version": "0.9.0",
+    "author": {
+      "name": "Supernormal",
+      "url": "http://supernormal.se"
+    },
+    "maintainers": [
+    {
+      "name": "Jonathan Wilsson",
+      "email": "jonathan.wilsson@gmail.com",
+      "url": "http://github.com/jwilsson"
+    },
+    {
+      "name": "Oskar Risberg",
+      "email": "oskar.risberg@gmail.com",
+      "url": "http://github.com/kokarn"
+    }
+  ],
+    "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    },
+    {
+      "type": "Beerware",
+      "url": "https://fedoraproject.org/wiki/Licensing/Beerware"
+    }
+  ],
+    "bugs": "https://github.com/kokarn/yaselect/issues",
+    "homepage": "https://github.com/kokarn/yaselect",
+    "docs": "https://github.com/kokarn/yaselect",
+    "download": "https://github.com/kokarn/yaselect/archive/master.zip",
+    "dependencies": {
+      "jquery": ">=1.7"
+    }
+}
