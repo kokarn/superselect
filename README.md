@@ -1,12 +1,12 @@
-# Yet-Another [jQuery] Select
+# Super [jQuery] Select
 
 ## Native
 
-yaselect provides a CSS customizable ``select`` box, while introducing minimum HTML & keeping maximum widget usability -- native support for arrow keys, search-as-you-type, scroll wheel, proper z-index, etc.
+superselect provides a CSS customizable ``select`` box, while introducing minimum HTML & keeping maximum widget usability -- native support for arrow keys, search-as-you-type, scroll wheel, proper z-index, etc.
 
 ## Short
 
-yaselect uses the actual ``select`` widget for displaying options, after activating it's ``size`` attribute. That is it.
+superselect uses the actual ``select`` widget for displaying options, after activating it's ``size`` attribute. That is it.
 
 ## Long
 
@@ -25,13 +25,13 @@ Given a select box,
 </select>
 ```
 
-Include jQuery, yaselect script & apply it to your ``select`` element
+Include jQuery, superselect script & apply it to your ``select`` element
 
 ```html
 <script src="jquery.min.js"></script>
-<script src="jquery.yaselect.min.js"></script>
+<script src="jquery.superselect.min.js"></script>
 <script>
-  jQuery('select').yaselect();
+  jQuery('select').superselect();
 </script>
 ```
 
@@ -40,12 +40,12 @@ Include jQuery, yaselect script & apply it to your ``select`` element
 Your ``select`` will become
 
 ```html
-<div class="yaselect-anchor">
-  <div class="yaselect-wrap yaselect-?">
-    <div class="yaselect-current"><!-- current selection --></div>
+<div class="superselect-anchor">
+  <div class="superselect-wrap superselect-?">
+    <div class="superselect-current"><!-- current selection --></div>
   </div>
   <!-- your select tag -->
-  <select name="my-select" style="z-index: 0; display: none;" class="yaselect-select" size="?">
+  <select name="my-select" style="z-index: 0; display: none;" class="superselect-select" size="?">
     <!-- your option tags -->
   </select>
 </div>
@@ -63,7 +63,7 @@ Set the number of options to show when clicked
   size: 5
 ```
 
-Make yaselect mimic the default browser behaviour and set the width of each select to that of it's children
+Make superselect mimic the default browser behaviour and set the width of each select to that of it's children
 ```html
   reuseWidth: true
 ```
@@ -82,4 +82,4 @@ Tested with
 
 Original code written by Chew Choon Keat, http://github.com/choonkeat/yaselect in 2011 under the MIT license
 
-90% rewritten in 2012 by [Jonathan Wilsson](https://github.com/jwilsson) & [Oskar Risberg](https://github.com/kokarn) for Supernormal and re-released under dual license Beerware & MIT.
+Rewritten in 2012 by [Jonathan Wilsson](https://github.com/jwilsson) & [Oskar Risberg](https://github.com/kokarn) for Supernormal and re-released under dual license Beerware & MIT.

@@ -1,16 +1,14 @@
 /*
-* yaselect
-* is yet-another jquery plugin for making <select> elements stylable by CSS
-* http://github.com/choonkeat/yaselect
+* superselect
+* is a jquery plugin for making <select> elements stylable by CSS
+* http://github.com/kokarn/superselect
 *
-* Copyright (c) 2011 Chew Choon Keat
-* Released under the MIT license
+* Released under the MIT license and the Beerware license
 *
-* Modified by Supernormal
 */
 
 (function ( $ ) {
-	$.fn.yaselect = function ( config ) {
+	$.fn.superselect = function ( config ) {
 		var defaults = {
 			individualStyling: true,
 			size: 5,
@@ -39,7 +37,7 @@
 				text = jselect.children( 'option:selected' ).text();
 			}
 
-			text = text + '<div class="yaselect-right-image"></div>';
+			text = text + '<div class="superselect-right-image"></div>';
 
 			curr.html( text );
 		}
@@ -55,7 +53,7 @@
 		}
 
 		function toggleOpen ( wrap ) {
-			wrap.toggleClass( 'yaselect-open yaselect-close' );
+			wrap.toggleClass( 'superselect-open superselect-close' );
 		}
 
 		function isMobile () {
@@ -73,22 +71,22 @@
 				fontSize;
 
 			// Prevent multiple instances on the same select
-			if ( jselect.hasClass( 'yaselect-select' ) ) {
+			if ( jselect.hasClass( 'superselect-select' ) ) {
 				return true;
 			}
 
-			wrap = $( '<div class="yaselect-wrap yaselect-open"><div class="yaselect-current"></div></div>' );
-			anchor = wrap.wrap( '<div class="yaselect-anchor"></div>' ).parent();
-			curr = wrap.find( '.yaselect-current' );
+			wrap = $( '<div class="superselect-wrap superselect-open"><div class="superselect-current"></div></div>' );
+			anchor = wrap.wrap( '<div class="superselect-anchor"></div>' ).parent();
+			curr = wrap.find( '.superselect-current' );
 			options = jselect.find( 'option' );
 			selectedOption = jselect[0].selectedIndex;
 
-			jselect.addClass( 'yaselect-select' );
+			jselect.addClass( 'superselect-select' );
 
 			setText(jselect, curr);
 
 			if ( config.individualStyling ) {
-				wrap.addClass( 'yaselect-wrap-' + index );
+				wrap.addClass( 'superselect-wrap-' + index );
 			}
 
 			if ( isMobile() ) {
@@ -184,7 +182,7 @@
 					.eq( selectedOption )
 					.attr( 'selected', 'selected' );
 
-				width += wrap.find( '.yaselect-right-image' ).outerWidth();
+				width += wrap.find( '.superselect-right-image' ).outerWidth();
 
 				anchor.width( width );
 			}

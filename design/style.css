@@ -4,19 +4,19 @@
 	==================================
 */
 
-.yaselect-select {
+.superselect-select {
 	position: absolute;
 }
 
-.yaselect-anchor {
+.superselect-anchor {
 	display: inline-block;
 	*display: inline;
 	position: relative;
 	*zoom: 1;
 }
 
-.yaselect-wrap {
-	background: url(images/yaselect-gradient.png) repeat top left;
+.superselect-wrap {
+	background: url(images/superselect-gradient.png) repeat top left;
 	border: 1px solid #c2cbc2;
 	border-radius: 3px;
 	color: #666;
@@ -27,7 +27,7 @@
 	outline: none;
 }
 
-.yaselect-wrap .yaselect-current {
+.superselect-wrap .superselect-current {
 	font-weight: lighter;
 	height: 100%;
 	overflow: hidden;
@@ -36,8 +36,8 @@
 	white-space: nowrap;
 }
 
-.yaselect-wrap .yaselect-current .yaselect-right-image {
-	background: url(images/yaselect-arrow.png) no-repeat right center;
+.superselect-wrap .superselect-current .superselect-right-image {
+	background: url(images/superselect-arrow.png) no-repeat right center;
 	height: 100%;
 	position: absolute;
 	right: 0;
