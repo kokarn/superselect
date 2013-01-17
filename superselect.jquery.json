@@ -30,13 +30,13 @@
     },
     {
       "type": "Beerware",
-      "url": "https://fedoraproject.org/wiki/Licensing/Beerware"
+      "url": "http://www.sax.de/~joerg/beerware-license.txt"
     }
   ],
-    "bugs": "https://github.com/kokarn/yaselect/issues",
-    "homepage": "https://github.com/kokarn/yaselect",
-    "docs": "https://github.com/kokarn/yaselect",
-    "download": "https://github.com/kokarn/yaselect/archive/master.zip",
+    "bugs": "https://github.com/kokarn/superselect/issues",
+    "homepage": "https://github.com/kokarn/superselect",
+    "docs": "https://github.com/kokarn/superselect",
+    "download": "https://github.com/kokarn/superselect/archive/master.zip",
     "dependencies": {
       "jquery": ">=1.7"
     }
