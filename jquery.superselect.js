@@ -37,6 +37,7 @@
 				text = jselect.children( 'option:selected' ).text();
 			}
 
+			text = '<span class="superselect-current-label">' + text + '</span>';
 			text = text + '<div class="superselect-right-image"></div>';
 
 			curr.html( text );
