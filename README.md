@@ -42,7 +42,10 @@ Your ``select`` will become
 ```html
 <div class="superselect-anchor">
   <div class="superselect-wrap superselect-?">
-    <div class="superselect-current"><!-- current selection --></div>
+    <div class="superselect-current">
+      <span class="superselect-current-label"><!-- current selection --></span>
+      <div class="superselect-right-image"></div>
+    </div>
   </div>
   <!-- your select tag -->
   <select name="my-select" style="z-index: 0; display: none;" class="superselect-select" size="?">
@@ -68,7 +71,7 @@ Make superselect mimic the default browser behaviour and set the width of each s
   reuseWidth: true
 ```
 
-## Compatibility 
+## Compatibility
 
 Tested with
 * IE 7-9
