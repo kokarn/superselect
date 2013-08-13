@@ -4,10 +4,8 @@
 * http://github.com/kokarn/superselect
 *
 * Released under the MIT license and the Beerware license
-*
 */
-
-(function ( $ ) {
+;(function ( $ ) {
 	$.fn.superselect = function ( config ) {
 		var defaults = {
 			individualStyling: true,
@@ -38,9 +36,10 @@
 			}
 
 			text = '<span class="superselect-current-label">' + text + '</span>';
-			text = text + '<div class="superselect-right-image"></div>';
+			text += '<div class="superselect-right-image"></div>';
 
-			curr.html( text );
+			// When using html() content gets duplicated in IE8 when using jQuery 1.10.x
+			curr[0].innerHTML = text;
 		}
 
 		function setValue ( jselect, curr, wrap, focusWrap ) {
@@ -84,7 +83,7 @@
 
 			jselect.addClass( 'superselect-select' );
 
-			setText(jselect, curr);
+			setText( jselect, curr );
 
 			if ( config.individualStyling ) {
 				wrap.addClass( 'superselect-wrap-' + index );
