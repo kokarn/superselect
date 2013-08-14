@@ -4,10 +4,8 @@
 * http://github.com/kokarn/superselect
 *
 * Released under the MIT license and the Beerware license
-*
 */
-
-(function ( $ ) {
+;(function ( $ ) {
 	$.fn.superselect = function ( config ) {
 		var defaults = {
 			individualStyling: true,
@@ -30,23 +28,26 @@
 			return text;
 		}
 
-		function setText ( jselect, curr ) {
+		function setText ( jselect, curr, wrap ) {
 			var text = getText( jselect );
 
 			if ( text === '' ) {
 				text = jselect.children( 'option:selected' ).text();
 			}
 
+			curr.empty();
+
 			text = '<span class="superselect-current-label">' + text + '</span>';
 			text = text + '<div class="superselect-right-image"></div>';
 
-			curr.html( text );
+			// Fix for html() duplicating content in IE8 under jQuery 1.10.x
+			wrap.html( '<div class="superselect-current">' + text + '</div>' );
 		}
 
 		function setValue ( jselect, curr, wrap, focusWrap ) {
 			jselect.blur();
 
-			setText( jselect, curr );
+			setText( jselect, curr, wrap );
 
 			if ( focusWrap ) {
 				wrap.focus();
@@ -84,7 +85,7 @@
 
 			jselect.addClass( 'superselect-select' );
 
-			setText(jselect, curr);
+			setText( jselect, curr, wrap );
 
 			if ( config.individualStyling ) {
 				wrap.addClass( 'superselect-wrap-' + index );
@@ -103,7 +104,7 @@
 						zIndex: 10
 					})
 					.on( 'change', function () {
-						setText( jselect, curr );
+						setText( jselect, curr, wrap );
 					})
 					.appendTo( anchor );
 			} else {
@@ -117,7 +118,7 @@
 						}
 					})
 					.on( 'change', function () {
-						setText( jselect, curr );
+						setText( jselect, curr, wrap );
 					})
 					.on( 'blur', function () {
 						jselect
@@ -169,7 +170,7 @@
 					$( this )
 						.attr( 'selected', 'selected' );
 
-					setText( jselect, curr );
+					setText( jselect, curr, wrap );
 
 					optionWidth = anchor.outerWidth();
 
